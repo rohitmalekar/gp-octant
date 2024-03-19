@@ -39,7 +39,7 @@ def make_clickable(name, link):
     return f"[{name}]({link})"
 
 # Load your CSV file
-df = pd.read_csv('./GreenPill/cluster_greenpill.csv')
+df = pd.read_csv('./cluster_greenpill.csv')
 
 # Streamlit widget to choose the project to center on, sorted alphabetically
 project_to_center = st.selectbox('Pick a project:', sorted(df['Project Name'].unique()))
