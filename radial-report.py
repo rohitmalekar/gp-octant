@@ -42,7 +42,7 @@ def make_clickable(name, link):
 df = pd.read_csv('./cluster_greenpill.csv')
 
 # Streamlit widget to choose the project to center on, sorted alphabetically
-project_to_center = st.selectbox('Pick a project:', sorted(df['Project Name'].unique()))
+project_to_center = st.selectbox('Pick a project:', sorted(df['Project Name'].str.replace("\\", "", regex=False).unique()))
 
 
 # Find the index of the selected project
