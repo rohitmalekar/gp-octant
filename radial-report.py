@@ -77,7 +77,7 @@ with col1:
         st.markdown(f"- {row['Project Name']}: {row['Short Project Desc']}")
 
 with col2:
-    st.markdown(f"### 3 least similar projects to {project_to_center}:")
+    st.markdown(f"### 3 most distinct projects to {project_to_center}:")
     for _, row in top_3_different.reset_index(drop=True).iterrows():
         st.markdown(f"- {row['Project Name']}: {row['Short Project Desc']}")
 
