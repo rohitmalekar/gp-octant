@@ -85,6 +85,7 @@ with col2:
 recentered_df = recenter_coordinates(df, project_index)
 
 st.markdown(f"## Interactive Scatter Plot Centered on {project_to_center}")
+st.markdown("Hover over the project for a short description. Zoom in to explore interesting clusters. Double-click to zoom out.")
 
 # Create the scatter plot with specified width and height
 fig = px.scatter(recentered_df, x='UMAP_1', y='UMAP_2', 
